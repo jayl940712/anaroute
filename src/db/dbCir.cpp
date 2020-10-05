@@ -514,6 +514,8 @@ bool CirDB::bSatisfySelfSymCondition(const Net& net, const Int_t symAxisX) const
 }
 
 void CirDB::checkNetSymSelfSym() {
+  freopen("/dev/null", "a", stdout);
+  freopen("/dev/null", "a", stderr);
   fprintf(stderr, "\n");
   for (UInt_t i = 0; i < this->numNets(); ++i) {
     const auto& net = this->net(i);
